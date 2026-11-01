@@ -1,0 +1,9 @@
+name: jellyfin
+services:
+    jellyfin:
+        volumes:
+            - /srv/jellyfin/config:/config
+            - /srv/jellyfin/cache:/cache
+            - /media/movies:/movies
+        network_mode: host
+        image: jellyfin/jellyfin:latest
